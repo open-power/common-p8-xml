@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- IBM_PROLOG_BEGIN_TAG                                                   -->
 <!-- This is an automatically generated prolog.                             -->
 <!--                                                                        -->
@@ -22,12 +23,11 @@
 <!-- permissions and limitations under the License.                         -->
 <!--                                                                        -->
 <!-- IBM_PROLOG_END_TAG                                                     -->
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<xsl:stylesheet version="1.0" 
+<xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:mrwcvc="http://w3.ibm.com/stg/power-firmware/schema/mrwcvc"
     xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrwcvc"
-    xmlns:ex="http://exslt.org/dates-and-times" 
+    xmlns:ex="http://exslt.org/dates-and-times"
     extension-element-prefixes="ex">
 
     <!-- Pass in the system name with: xsltproc \-\-stringparam system <the systemName> -->
@@ -44,7 +44,7 @@
                 <h1>Centaur VMEM Regulators</h1>
                 <br/>
                 <br/>
-                
+
                 <table border="3" cellpadding="5">
                 <tr>
                     <th>Target</th>
