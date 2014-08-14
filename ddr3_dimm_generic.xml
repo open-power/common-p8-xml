@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/mrwb/serverwiz/com.ibm.njames.serverwiz/src/com/ibm/njames/serverwiz/designer/model/LogicDiagram.java,v 1.54 2013/06/06 10:00:03 kpachar Exp $ --><card xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw" xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw">
+
+<id>ddr3_dimm_generic</id>
+<card-type>dimm</card-type>
+<description>DDR3 DIMM</description>
+
+<parts-used>
+	<part-used><part-id>DDR3_DRAM_ABSTRACT</part-id></part-used>
+	<part-used><part-id>DIMM_SPD</part-id></part-used>
+</parts-used>
+<connectors-used>
+	<connector><part-id>DDR3 DIMM</part-id></connector>
+</connectors-used>
+<part-instances>
+	<part-instance><id>USPD</id><part-id>DIMM_SPD</part-id><position>0</position><content-type>PRIMARY_FRU_VPD</content-type><vpd-size>24c32</vpd-size></part-instance>
+	<part-instance><id>U0</id><part-id>DDR3_DRAM_ABSTRACT</part-id><position>0</position></part-instance>
+</part-instances>
+<connector-instances>
+	<connector-instance><id>UCONN</id><connector-id>DDR3 DIMM</connector-id><position>0</position></connector-instance>
+</connector-instances>
+<busses>
+<ddrs>
+	<ddr>
+		<id>ddr13</id>
+		<source><connector-instance-id>UCONN</connector-instance-id><pin-name>DDR3_CH</pin-name></source>
+		<endpoint><part-instance-id>U0</part-instance-id><unit-name>DDR_INTERFACE</unit-name></endpoint>
+	</ddr>
+</ddrs>
+<powers>
+	<power>
+		<id>power12</id>
+		<resistance>0</resistance>
+		<source><connector-instance-id>UCONN</connector-instance-id><pin-name>VMEM</pin-name></source>
+		<endpoint><part-instance-id>U0</part-instance-id><unit-name>VDD</unit-name></endpoint>
+	</power>
+</powers>
+<i2cs>
+	<i2c>
+		<id>i2c14</id>
+		<source><connector-instance-id>UCONN</connector-instance-id><pin-name>I2CMASTER_DIMM</pin-name></source>
+		<endpoint><part-instance-id>USPD</part-instance-id><unit-name>SVPD</unit-name></endpoint>
+	</i2c>
+</i2cs>
+</busses>
+</card>

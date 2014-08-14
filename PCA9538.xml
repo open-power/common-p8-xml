@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/working/parts/PCA9538.xml,v 1.1 2013/07/09 16:51:38 spinler Exp $ -->
+<parts xmlns:xi="http://www.w3.org/2001/XInclude"
+  	xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    >
+    
+<part>
+	<id>PCA9538</id>
+	<part-class>chip</part-class>
+	<part-type>i2c-expander</part-type>
+	<part-num>x0pxxxx</part-num>
+	<description>I2C Expander</description>
+	<units>
+		<i2c-slave-units>
+			<i2c-slave-unit>
+				<id>I2C</id>
+				<pin-name>SDA</pin-name>
+				<fixed-address></fixed-address>
+			</i2c-slave-unit>
+		</i2c-slave-units>
+		<gpio-master-units>
+			<gpio-master-unit><id>IO0</id><port>0</port></gpio-master-unit>
+			<gpio-master-unit><id>IO1</id><port>1</port></gpio-master-unit>
+			<gpio-master-unit><id>IO2</id><port>2</port></gpio-master-unit>
+			<gpio-master-unit><id>IO3</id><port>3</port></gpio-master-unit>
+			<gpio-master-unit><id>IO4</id><port>4</port></gpio-master-unit>
+			<gpio-master-unit><id>IO5</id><port>5</port></gpio-master-unit>
+			<gpio-master-unit><id>IO6</id><port>6</port></gpio-master-unit>
+			<gpio-master-unit><id>IO7</id><port>7</port></gpio-master-unit>
+			<gpio-master-unit><id>INT</id><pin-name>INT</pin-name></gpio-master-unit>
+		</gpio-master-units>
+		<power-input-units>
+			<power-input-unit>
+				<id>3.3V</id>
+				<pin-name>VCC</pin-name>
+				<voltage voltage-units="Volts">3.3</voltage>
+				<current-nom current-units="Amps">0.01</current-nom>
+				<current-max current-units="Amps">0.02</current-max>
+			</power-input-unit>
+		</power-input-units>
+    </units>
+</part>
+
+</parts>

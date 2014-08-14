@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/parts/DIMM_SPD.xml,v 1.2 2012-04-11 18:30:16 spinler Exp $ -->
+<parts xmlns:xi="http://www.w3.org/2001/XInclude"
+  	xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    >
+    
+<part>
+	<id>DIMM_SPD</id>
+	<part-class>chip</part-class>
+	<part-type>seeprom</part-type>
+	<content-type>DIMM_VPD</content-type>
+	<vpd-size>24c32</vpd-size>
+	<units>
+		<i2c-slave-units>
+			<i2c-slave-unit>
+				<id>SVPD</id>
+				<pin-name>SDA</pin-name>
+				<fixed-address></fixed-address>
+			</i2c-slave-unit>
+		</i2c-slave-units>
+	</units>
+</part>
+
+</parts>

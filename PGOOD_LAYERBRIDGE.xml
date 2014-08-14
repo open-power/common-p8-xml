@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/parts/PGOOD_LAYERBRIDGE.xml,v 1.2 2012-08-01 20:01:40 drcampbe Exp $ -->
+<parts xmlns:xi="http://www.w3.org/2001/XInclude"
+		xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+		xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw">
+   	<part>
+   		<!-- This part is used purely in ServerWiz to connect GPIO pins in the GPIO layer to the PGOOD pins in the Power layer -->
+		<id>PGOOD_LAYERBRIDGE</id>
+		<part-class>layer-bridge</part-class>
+		<units>
+			<gpio-slave-units>
+				<gpio-slave-unit><id>GPIO</id></gpio-slave-unit>
+			</gpio-slave-units>
+			<pgood-master-units>
+				<pgood-master-unit><id>PGOOD</id></pgood-master-unit>
+			</pgood-master-units> 
+		</units>
+	</part>
+</parts>
