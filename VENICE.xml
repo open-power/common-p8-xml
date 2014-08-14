@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- IBM_PROLOG_BEGIN_TAG                                                   -->
 <!-- This is an automatically generated prolog.                             -->
 <!--                                                                        -->
@@ -22,7 +23,6 @@
 <!-- permissions and limitations under the License.                         -->
 <!--                                                                        -->
 <!-- IBM_PROLOG_END_TAG                                                     -->
-<?xml version="1.0" encoding="UTF-8"?>
 <!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/working/parts/VENICE.xml,v 1.22 2014/01/16 12:31:49 hlava Exp $ -->
 <parts xmlns:xi="http://www.w3.org/2001/XInclude"
   	xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
@@ -81,13 +81,13 @@
 			<chiplet><id>mcs1</id><target-name>mcs</target-name><position>1</position></chiplet>
 			<chiplet><id>mcs2</id><target-name>mcs</target-name><position>2</position></chiplet>
 			<chiplet><id>mcs3</id><target-name>mcs</target-name><position>3</position></chiplet>
-		</chiplet>		
+		</chiplet>
 		<chiplet><id>mc1</id>
 			<chiplet><id>mcs4</id><target-name>mcs</target-name><position>4</position></chiplet>
 			<chiplet><id>mcs5</id><target-name>mcs</target-name><position>5</position></chiplet>
 			<chiplet><id>mcs6</id><target-name>mcs</target-name><position>6</position></chiplet>
 			<chiplet><id>mcs7</id><target-name>mcs</target-name><position>7</position></chiplet>
-		</chiplet>		
+		</chiplet>
 	</chiplets>
 	<units>
 		<ref-clockin-units>
@@ -96,7 +96,7 @@
 			<ref-clockin-unit><id>OSC0_TOD_REFCLK</id><function>tod</function><port>0</port></ref-clockin-unit>
 			<ref-clockin-unit><id>OSC1_CHIP_REFCLK</id><function>proc</function><port>1</port></ref-clockin-unit>
 			<ref-clockin-unit><id>OSC1_PCIE_REFCLK</id><function>pcie</function><port>1</port></ref-clockin-unit>
-			<ref-clockin-unit><id>OSC1_TOD_REFCLK</id><function>tod</function><port>1</port></ref-clockin-unit>			
+			<ref-clockin-unit><id>OSC1_TOD_REFCLK</id><function>tod</function><port>1</port></ref-clockin-unit>
 		</ref-clockin-units>
 		<i2c-slave-units>
 			<i2c-slave-unit>
@@ -113,7 +113,7 @@
 			<i2c-master-unit><id>I2CM_PROC_PROM1</id><engine>0</engine><port>1</port></i2c-master-unit>
 			<i2c-master-unit><id>I2CM_HOTPLUG</id><engine>1</engine><port>1</port></i2c-master-unit>
 			<i2c-master-unit><id>I2CM_LIGHTPATH</id><engine>1</engine><port>0</port></i2c-master-unit>
-		</i2c-master-units>	
+		</i2c-master-units>
 		<gpio-master-units>
 			<gpio-master-unit><id>OSC0_OSCSW_CTL0</id></gpio-master-unit>
 			<gpio-master-unit><id>OSC0_OSCSW_CTL1</id></gpio-master-unit>
@@ -128,9 +128,9 @@
 		</gpio-slave-units>
 		<spi-master-units>
       <spi-master-unit><id>SPI</id><pin-name>SPI</pin-name></spi-master-unit>
-    </spi-master-units>	
+    </spi-master-units>
 		<psi-units>
-			<psi-unit><id>PSI</id></psi-unit>			
+			<psi-unit><id>PSI</id></psi-unit>
 		</psi-units>
 		<fsi-slave-units>
 			<fsi-slave-unit><id>FSI_SLAVE0</id><port>0</port></fsi-slave-unit>
@@ -163,7 +163,7 @@
 			<fsi-master-unit><id>MFSI5</id><engine>13</engine><port>5</port><cfam-id>cfam0</cfam-id></fsi-master-unit>
 			<fsi-master-unit><id>MFSI6</id><engine>13</engine><port>6</port><cfam-id>cfam0</cfam-id></fsi-master-unit>
 			<fsi-master-unit><id>MFSI7</id><engine>13</engine><port>7</port><cfam-id>cfam0</cfam-id></fsi-master-unit>
-			
+
 		</fsi-master-units>
 		<lpc-units>
 			<lpc-unit><id>LPC</id></lpc-unit>
@@ -171,19 +171,19 @@
 		<powerbus-units>
 			<powerbus-unit><id>A0</id><type>A</type></powerbus-unit>
 			<powerbus-unit><id>A1</id><type>A</type></powerbus-unit>
-			<powerbus-unit><id>A2</id><type>A</type></powerbus-unit>			
+			<powerbus-unit><id>A2</id><type>A</type></powerbus-unit>
 			<powerbus-unit><id>X0</id><type>X</type></powerbus-unit>
 			<powerbus-unit><id>X1</id><type>X</type></powerbus-unit>
 			<powerbus-unit><id>X2</id><type>X</type></powerbus-unit>
-			<powerbus-unit><id>X3</id><type>X</type></powerbus-unit>			
+			<powerbus-unit><id>X3</id><type>X</type></powerbus-unit>
 		</powerbus-units>
 		<pcie-root-units>
 			<pcie-root-unit><id>PCIE_IOP0</id><iop>0</iop><starting-lane>0</starting-lane></pcie-root-unit>   <!-- IOP 0 is x16, or 2 x8s -->
 			<pcie-root-unit><id>PCIE_IOP0_1</id><iop>0</iop><starting-lane>8</starting-lane></pcie-root-unit> <!-- if IOP 0 is bifucated into 2 x8s, use this -->
 			<pcie-root-unit><id>PCIE_IOP1</id><iop>1</iop><starting-lane>0</starting-lane></pcie-root-unit>   <!-- IOP 1 is x8 -->
-		</pcie-root-units>			
+		</pcie-root-units>
 
-			
+
 		<dmi-master-units>
 			<dmi-master-unit><id>DMI0</id><chiplet-id>mcs0</chiplet-id></dmi-master-unit>
 			<dmi-master-unit><id>DMI1</id><chiplet-id>mcs1</chiplet-id></dmi-master-unit>
@@ -229,7 +229,7 @@
 				<voltage voltage-units="Volts">1.5</voltage>
 				<current-nom current-units="Amps">2</current-nom>
 				<current-max current-units="Amps">1</current-max>
-			</power-unit>			
+			</power-unit>
 		</power-units>
 
 	</units>
@@ -289,7 +289,7 @@
     </internal-units>
 
 	<internal-attributes>
-	
+
 	    <instruction-cache-attributes>
 	        <per-cpu>yes</per-cpu>
 	        <cache-size storage-units="KByte">32</cache-size>
@@ -297,7 +297,7 @@
 	        <cache-block-size storage-units="Byte">128</cache-block-size>
 	        <associativity>4-way</associativity>
 	    </instruction-cache-attributes>
-	
+
 	    <data-cache-attributes>
 	        <per-cpu>yes</per-cpu>
 	        <cache-size storage-units="KByte">64</cache-size>
@@ -305,7 +305,7 @@
 	        <cache-block-size storage-units="Byte">128</cache-block-size>
 	        <associativity>8-way</associativity>
 	    </data-cache-attributes>
-	
+
 	    <l2-cache-attributes>
 	        <per-cpu>yes</per-cpu>
 	        <cache-size storage-units="KByte">512</cache-size>
@@ -313,7 +313,7 @@
 	        <cache-block-size storage-units="Byte">128</cache-block-size>
 	        <associativity>8-way</associativity>
 	    </l2-cache-attributes>
-	
+
 	    <l3-cache-attributes>
 	        <per-cpu>yes</per-cpu>
 	        <cache-size storage-units="MByte">512</cache-size>
@@ -321,7 +321,7 @@
 	        <cache-block-size storage-units="Byte">128</cache-block-size>
 	        <associativity>8-way</associativity>
 	    </l3-cache-attributes>
-	
+
 	    <cpu-attributes>
 			<bus-width>8</bus-width>
 	        <data-tlb-entries>512</data-tlb-entries>
@@ -339,7 +339,7 @@
 	        <supports-bridge-facilities>no</supports-bridge-facilities>
 			<threads-per-core>8</threads-per-core>
 	    </cpu-attributes>
-	
+
 	</internal-attributes>
 
 </part>

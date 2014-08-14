@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- IBM_PROLOG_BEGIN_TAG                                                   -->
 <!-- This is an automatically generated prolog.                             -->
 <!--                                                                        -->
@@ -22,7 +23,6 @@
 <!-- permissions and limitations under the License.                         -->
 <!--                                                                        -->
 <!-- IBM_PROLOG_END_TAG                                                     -->
-<?xml version="1.0" encoding="UTF-8"?>
 <!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/common/pcie_x16_card.xml,v 1.14 2013/06/04 15:45:24 szerdi Exp $ --><card xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw" xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw">
 
 <id>pcie_x16_card</id>
