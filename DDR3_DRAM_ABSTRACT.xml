@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/parts/DDR3_DRAM_ABSTRACT.xml,v 1.1 2012-02-07 20:15:26 njames Exp $ -->
+<parts xmlns:xi="http://www.w3.org/2001/XInclude"
+  	xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    >
+    
+<part>
+	<id>DDR3_DRAM_ABSTRACT</id>
+	<part-class>chip</part-class>
+	<part-type>dram</part-type>
+	<units>
+		<ddr-slave-units>
+			<ddr-slave-unit>
+				<id>DDR_INTERFACE</id>
+				<pin-name>ddr_addr</pin-name>
+			</ddr-slave-unit>
+		</ddr-slave-units>
+		<power-units>
+			<power-unit>
+				<id>VDD</id>
+				<pin-name>VDD</pin-name>
+				<voltage voltage-units="Volts">1.35</voltage>
+				<current-nom current-units="Amps">lookup</current-nom>
+				<current-max current-units="Amps">lookup</current-max>
+			</power-unit>
+		</power-units>
+	</units>
+</part>
+
+</parts>

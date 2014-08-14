@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/parts/PCIE_X16_ABSTRACT.xml,v 1.1 2012-02-07 20:15:15 njames Exp $ -->
+<parts xmlns:xi="http://www.w3.org/2001/XInclude"
+  	xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    >
+    
+<part>
+	<id>PCIE_X16_ABSTRACT</id>
+	<part-class>blackbox</part-class>
+    <part-type>pcie-blackbox</part-type>
+	<units>
+		<i2c-slave-units>
+			<i2c-slave-unit>
+				<id>I2C</id>
+				<pin-name>SDA</pin-name>
+				<fixed-address></fixed-address>
+			</i2c-slave-unit>
+		</i2c-slave-units>
+		<pcie-endpoint-units>
+			<pcie-endpoint-unit><id>PCIE_X16</id><width>16</width></pcie-endpoint-unit>
+		</pcie-endpoint-units>
+		<power-input-units>
+			<power-input-unit>
+				<id>3.3V</id>
+				<pin-name>VCC</pin-name>
+				<voltage voltage-units="Volts">3.3</voltage>
+				<current-nom current-units="Amps">0.01</current-nom>
+				<current-max current-units="Amps">0.02</current-max>
+			</power-input-unit>
+			<power-input-unit>
+				<id>12V</id>
+				<pin-name>12V</pin-name>
+				<voltage voltage-units="Volts">12</voltage>
+				<current-nom current-units="Amps">0.01</current-nom>
+				<current-max current-units="Amps">0.02</current-max>
+			</power-input-unit>
+		</power-input-units>
+	</units>
+</part>
+
+</parts>

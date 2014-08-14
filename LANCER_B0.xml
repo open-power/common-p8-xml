@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/working/parts/LANCER_B0.xml,v 1.1 2012/02/07 20:15:25 njames Exp $ -->
+<parts xmlns:xi="http://www.w3.org/2001/XInclude"
+  	xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    >
+    
+<part>
+	<id>LANCER_B0</id>
+	<part-class>chip</part-class>
+	<part-type>ethernet</part-type>
+	<part-num>x0pxxxx</part-num>
+	<description>Emulex Lancer B0 - 4ports</description>
+	<units>
+		<pcie-endpoint-units>
+			<pcie-endpoint-unit><id>PCIE_X8</id><width>8</width></pcie-endpoint-unit>
+		</pcie-endpoint-units>
+		<xfi-master-units>
+			<xfi-master-unit><id>ETH0</id><port>0</port></xfi-master-unit>
+			<xfi-master-unit><id>ETH1</id><port>1</port></xfi-master-unit>
+			<xfi-master-unit><id>ETH2</id><port>2</port></xfi-master-unit>
+			<xfi-master-unit><id>ETH3</id><port>3</port></xfi-master-unit>
+		</xfi-master-units>
+		<power-input-units>
+			<power-input-unit>
+				<id>0.9V</id>
+				<pin-name>VCORE</pin-name>
+				<voltage voltage-units="Volts">0.9</voltage>
+				<current-nom current-units="Amps">0.01</current-nom>
+				<current-max current-units="Amps">0.02</current-max>
+			</power-input-unit>			
+			<power-input-unit>
+				<id>1.2V</id>
+				<pin-name>VLOGIC</pin-name>
+				<voltage voltage-units="Volts">1.2</voltage>
+				<current-nom current-units="Amps">0.01</current-nom>
+				<current-max current-units="Amps">0.02</current-max>
+			</power-input-unit>			
+			<power-input-unit>
+				<id>1.8V</id>
+				<pin-name>VIO</pin-name>
+				<voltage voltage-units="Volts">1.8</voltage>
+				<current-nom current-units="Amps">0.01</current-nom>
+				<current-max current-units="Amps">0.02</current-max>
+			</power-input-unit>			
+			<power-input-unit>
+				<id>3.3V</id>
+				<pin-name>VCC</pin-name>
+				<voltage voltage-units="Volts">3.3</voltage>
+				<current-nom current-units="Amps">0.01</current-nom>
+				<current-max current-units="Amps">0.02</current-max>
+			</power-input-unit>			
+		</power-input-units>
+	</units>
+</part>
+
+</parts>

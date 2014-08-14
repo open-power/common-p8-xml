@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/common/pcie_x16_card.xml,v 1.14 2013/06/04 15:45:24 szerdi Exp $ --><card xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw" xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw">
+
+<id>pcie_x16_card</id>
+<card-type>pcie</card-type>
+<description>PCIe x16 Card</description>
+
+<parts-used>
+	<part-used><part-id>PCIE_X16_ABSTRACT</part-id></part-used>
+</parts-used>
+<connectors-used>
+	<connector><part-id>PCIE_X16_SLOT</part-id></connector>
+</connectors-used>
+<part-instances>
+	<part-instance><id>U3</id><part-id>PCIE_X16_ABSTRACT</part-id><position>0</position></part-instance>
+</part-instances>
+<connector-instances>
+	<connector-instance><id>JSLOT</id><connector-id>PCIE_X16_SLOT</connector-id><position>0</position></connector-instance>
+</connector-instances>
+<busses>
+<pcies>
+	<pcie>
+		<id>pcie2</id>
+		<source><connector-instance-id>JSLOT</connector-instance-id><pin-name>PCIE_X16</pin-name></source>
+		<endpoint><part-instance-id>U3</part-instance-id><unit-name>PCIE_X16</unit-name></endpoint>
+	</pcie>
+</pcies>
+<powers>
+	<power>
+		<id>power11</id>
+		<resistance>0</resistance>
+		<source><connector-instance-id>JSLOT</connector-instance-id><pin-name>12V</pin-name></source>
+		<endpoint><part-instance-id>U3</part-instance-id><unit-name>12V</unit-name></endpoint>
+	</power>
+	<power>
+		<id>power14</id>
+		<resistance>0</resistance>
+		<source><connector-instance-id>JSLOT</connector-instance-id><pin-name>3.3V</pin-name></source>
+		<endpoint><part-instance-id>U3</part-instance-id><unit-name>3.3V</unit-name></endpoint>
+	</power>
+</powers>
+</busses>
+</card>
