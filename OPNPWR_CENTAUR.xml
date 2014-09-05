@@ -1,36 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- IBM_PROLOG_BEGIN_TAG                                                   -->
-<!-- This is an automatically generated prolog.                             -->
-<!--                                                                        -->
-<!-- $Source: CENTAUR.xml $                                                 -->
-<!--                                                                        -->
-<!-- OpenPOWER HostBoot Project                                             -->
-<!--                                                                        -->
-<!-- Contributors Listed Below - COPYRIGHT 2014                             -->
-<!-- [+] International Business Machines Corp.                              -->
-<!--                                                                        -->
-<!--                                                                        -->
-<!-- Licensed under the Apache License, Version 2.0 (the "License");        -->
-<!-- you may not use this file except in compliance with the License.       -->
-<!-- You may obtain a copy of the License at                                -->
-<!--                                                                        -->
-<!--     http://www.apache.org/licenses/LICENSE-2.0                         -->
-<!--                                                                        -->
-<!-- Unless required by applicable law or agreed to in writing, software    -->
-<!-- distributed under the License is distributed on an "AS IS" BASIS,      -->
-<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or        -->
-<!-- implied. See the License for the specific language governing           -->
-<!-- permissions and limitations under the License.                         -->
-<!--                                                                        -->
-<!-- IBM_PROLOG_END_TAG                                                     -->
-<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/parts/CENTAUR.xml,v 1.10 2013/06/27 18:06:29 spinler Exp $ -->
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/working/parts/OPNPWR_CENTAUR.xml,v 1.1 2014/08/08 17:55:39 mashak Exp $ -->
 <parts xmlns:xi="http://www.w3.org/2001/XInclude"
   	xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
     xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw"
     >
 
 <part>
-	<id>CENTAUR</id>
+	<id>OPNPWR_CENTAUR</id>
 	<part-class>chip</part-class>
 	<ec-level>DD1</ec-level>
 	<part-type>membuf</part-type>
@@ -41,7 +17,7 @@
 			<chiplet><id>port1</id></chiplet>
 			<chiplet><id>port2</id></chiplet>
 			<chiplet><id>port3</id></chiplet>
-		</chiplet>
+		</chiplet>		
 		<chiplet><id>mba23</id><target-name>mba</target-name><position>1</position>
 			<chiplet><id>port0</id></chiplet>
 			<chiplet><id>port1</id></chiplet>
@@ -77,14 +53,14 @@
 			<gpio-unit><id>GPIO_PORT0</id><engine>7</engine><port>0</port></gpio-unit>
 		</gpio-units>
 		<ddr-master-units>
-			<ddr-master-unit><id>DDR3_CH0_SLOT0</id><port>0</port><slot>0</slot><chiplet-id>mba01</chiplet-id></ddr-master-unit>
-			<ddr-master-unit><id>DDR3_CH0_SLOT1</id><port>0</port><slot>1</slot><chiplet-id>mba01</chiplet-id></ddr-master-unit>
-			<ddr-master-unit><id>DDR3_CH1_SLOT0</id><port>0</port><slot>0</slot><chiplet-id>mba23</chiplet-id></ddr-master-unit>
-			<ddr-master-unit><id>DDR3_CH1_SLOT1</id><port>0</port><slot>1</slot><chiplet-id>mba23</chiplet-id></ddr-master-unit>
-			<ddr-master-unit><id>DDR3_CH2_SLOT0</id><port>1</port><slot>0</slot><chiplet-id>mba01</chiplet-id></ddr-master-unit>
-			<ddr-master-unit><id>DDR3_CH2_SLOT1</id><port>1</port><slot>1</slot><chiplet-id>mba01</chiplet-id></ddr-master-unit>
-			<ddr-master-unit><id>DDR3_CH3_SLOT0</id><port>1</port><slot>0</slot><chiplet-id>mba23</chiplet-id></ddr-master-unit>
-			<ddr-master-unit><id>DDR3_CH3_SLOT1</id><port>1</port><slot>1</slot><chiplet-id>mba23</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTA_SLOT0</id><port>0</port><slot>0</slot><chiplet-id>mba01</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTA_SLOT1</id><port>0</port><slot>1</slot><chiplet-id>mba01</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTC_SLOT0</id><port>0</port><slot>0</slot><chiplet-id>mba23</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTC_SLOT1</id><port>0</port><slot>1</slot><chiplet-id>mba23</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTB_SLOT0</id><port>1</port><slot>0</slot><chiplet-id>mba01</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTB_SLOT1</id><port>1</port><slot>1</slot><chiplet-id>mba01</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTD_SLOT0</id><port>1</port><slot>0</slot><chiplet-id>mba23</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTD_SLOT1</id><port>1</port><slot>1</slot><chiplet-id>mba23</chiplet-id></ddr-master-unit>
 		</ddr-master-units>
 		<dmi-slave-units>
 			<dmi-slave-unit><id>DMI</id></dmi-slave-unit>

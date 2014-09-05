@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/working/parts/OPNPWR_VENICE.xml,v 1.2 2014/08/20 01:16:07 mashak Exp $ -->
+<parts xmlns:xi="http://www.w3.org/2001/XInclude"
+  	xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    >
+
+<part>
+	<id>OPNPWR_VENICE</id>
+	<part-class>chip</part-class>
+	<ec-level>DD1</ec-level>
+	<part-type>cpu</part-type>
+	<processor-family>IBM Power8</processor-family>
+	<ecmd>yes</ecmd>
+	<chiplets>
+		<chiplet><id>ex1</id><target-name>ex</target-name><position>1</position>
+		    <chiplet><id>core1</id><target-name>core</target-name><position>1</position></chiplet>
+        </chiplet>
+		<chiplet><id>ex2</id><target-name>ex</target-name><position>2</position>
+		    <chiplet><id>core2</id><target-name>core</target-name><position>2</position></chiplet>
+        </chiplet>
+		<chiplet><id>ex3</id><target-name>ex</target-name><position>3</position>
+		    <chiplet><id>core3</id><target-name>core</target-name><position>3</position></chiplet>
+        </chiplet>
+		<chiplet><id>ex4</id><target-name>ex</target-name><position>4</position>
+		    <chiplet><id>core4</id><target-name>core</target-name><position>4</position></chiplet>
+        </chiplet>
+		<chiplet><id>ex5</id><target-name>ex</target-name><position>5</position>
+		    <chiplet><id>core5</id><target-name>core</target-name><position>5</position></chiplet>
+        </chiplet>
+		<chiplet><id>ex6</id><target-name>ex</target-name><position>6</position>
+		    <chiplet><id>core6</id><target-name>core</target-name><position>6</position></chiplet>
+        </chiplet>
+		<chiplet><id>ex9</id><target-name>ex</target-name><position>9</position>
+		    <chiplet><id>core9</id><target-name>core</target-name><position>9</position></chiplet>
+        </chiplet>
+		<chiplet><id>ex10</id><target-name>ex</target-name><position>10</position>
+		    <chiplet><id>core10</id><target-name>core</target-name><position>10</position></chiplet>
+        </chiplet>
+		<chiplet><id>ex11</id><target-name>ex</target-name><position>11</position>
+		    <chiplet><id>core11</id><target-name>core</target-name><position>11</position></chiplet>
+        </chiplet>
+		<chiplet><id>ex12</id><target-name>ex</target-name><position>12</position>
+		    <chiplet><id>core12</id><target-name>core</target-name><position>12</position></chiplet>
+        </chiplet>
+		<chiplet><id>ex13</id><target-name>ex</target-name><position>13</position>
+		    <chiplet><id>core13</id><target-name>core</target-name><position>13</position></chiplet>
+        </chiplet>
+		<chiplet><id>ex14</id><target-name>ex</target-name><position>14</position>
+		    <chiplet><id>core14</id><target-name>core</target-name><position>14</position></chiplet>
+        </chiplet>
+		<chiplet><id>occ</id><target-name>occ</target-name><position>0</position></chiplet>
+         <chiplet><id>nx</id><target-name>nx</target-name><position>0</position></chiplet>
+        <chiplet><id>pore</id><target-name>pore</target-name><position>0</position></chiplet>
+		<chiplet><id>mc0</id>
+			<chiplet><id>mcs0</id><target-name>mcs</target-name><position>0</position></chiplet>
+			<chiplet><id>mcs1</id><target-name>mcs</target-name><position>1</position></chiplet>
+			<chiplet><id>mcs2</id><target-name>mcs</target-name><position>2</position></chiplet>
+			<chiplet><id>mcs3</id><target-name>mcs</target-name><position>3</position></chiplet>
+		</chiplet>		
+		<chiplet><id>mc1</id>
+			<chiplet><id>mcs4</id><target-name>mcs</target-name><position>4</position></chiplet>
+			<chiplet><id>mcs5</id><target-name>mcs</target-name><position>5</position></chiplet>
+			<chiplet><id>mcs6</id><target-name>mcs</target-name><position>6</position></chiplet>
+			<chiplet><id>mcs7</id><target-name>mcs</target-name><position>7</position></chiplet>
+		</chiplet>		
+	</chiplets>
+	<units>
+		<ref-clockin-units>
+			<ref-clockin-unit><id>OSC0_CHIP_REFCLK</id><function>proc</function><port>0</port></ref-clockin-unit>
+			<ref-clockin-unit><id>OSC0_PCIE_REFCLK</id><function>pcie</function><port>0</port></ref-clockin-unit>
+			<ref-clockin-unit><id>OSC0_TOD_REFCLK</id><function>tod</function><port>0</port></ref-clockin-unit>
+			<ref-clockin-unit><id>OSC1_CHIP_REFCLK</id><function>proc</function><port>1</port></ref-clockin-unit>
+			<ref-clockin-unit><id>OSC1_PCIE_REFCLK</id><function>pcie</function><port>1</port></ref-clockin-unit>
+			<ref-clockin-unit><id>OSC1_TOD_REFCLK</id><function>tod</function><port>1</port></ref-clockin-unit>			
+		</ref-clockin-units>
+		<i2c-slave-units>
+			<i2c-slave-unit>
+				<id>I2C0</id>
+				<pin-name>SDA0</pin-name>
+				<fixed-address></fixed-address>
+				<description>I2C Slave for BMC connection</description>
+			</i2c-slave-unit>
+		</i2c-slave-units>
+		<i2c-master-units>
+      		<i2c-master-unit><id>I2CM_PROM</id><engine>6</engine><port>0</port><cfam-id>cfam0</cfam-id></i2c-master-unit>
+      		<i2c-master-unit><id>I2CM_PROC_PROM</id><engine>0</engine><port>0</port></i2c-master-unit>
+			<i2c-master-unit><id>I2CM_PROM1</id><engine>6</engine><port>1</port><cfam-id>cfam0</cfam-id></i2c-master-unit>
+			<i2c-master-unit><id>I2CM_PROC_PROM1</id><engine>0</engine><port>1</port></i2c-master-unit>
+			<i2c-master-unit><id>I2CM_HOTPLUG</id><engine>1</engine><port>1</port></i2c-master-unit>
+			<i2c-master-unit><id>I2CM_LIGHTPATH</id><engine>1</engine><port>0</port></i2c-master-unit>
+		</i2c-master-units>	
+		<gpio-master-units>
+			<gpio-master-unit><id>OSC0_OSCSW_CTL0</id></gpio-master-unit>
+			<gpio-master-unit><id>OSC0_OSCSW_CTL1</id></gpio-master-unit>
+			<gpio-master-unit><id>OSC1_OSCSW_CTL0</id></gpio-master-unit>
+			<gpio-master-unit><id>OSC1_OSCSW_CTL1</id></gpio-master-unit>
+		</gpio-master-units>
+		<gpio-slave-units>
+			<gpio-slave-unit><id>OSC0_USE_OSC0</id></gpio-slave-unit>
+			<gpio-slave-unit><id>OSC0_USE_OSC1</id></gpio-slave-unit>
+			<gpio-slave-unit><id>OSC1_USE_OSC0</id></gpio-slave-unit>
+			<gpio-slave-unit><id>OSC1_USE_OSC1</id></gpio-slave-unit>
+		</gpio-slave-units>
+		<spi-master-units>
+      <spi-master-unit><id>SPI</id><pin-name>SPI</pin-name></spi-master-unit>
+    </spi-master-units>	
+		<psi-units>
+			<psi-unit><id>PSI</id></psi-unit>			
+		</psi-units>
+		<fsi-slave-units>
+			<fsi-slave-unit><id>FSI_SLAVE0</id><port>0</port></fsi-slave-unit>
+			<fsi-slave-unit><id>FSI_SLAVE1</id><port>1</port></fsi-slave-unit>
+		</fsi-slave-units>
+		<fsi-cascade-master-units>
+			<fsi-cascade-master-unit><id>FSI_CASCADE0</id> <cmfsi>0</cmfsi><engine>12</engine><port>0</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE1</id> <cmfsi>0</cmfsi><engine>12</engine><port>1</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE2</id> <cmfsi>0</cmfsi><engine>12</engine><port>2</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE3</id> <cmfsi>0</cmfsi><engine>12</engine><port>3</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE4</id> <cmfsi>0</cmfsi><engine>12</engine><port>4</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE5</id> <cmfsi>0</cmfsi><engine>12</engine><port>5</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE6</id> <cmfsi>0</cmfsi><engine>12</engine><port>6</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE7</id> <cmfsi>0</cmfsi><engine>12</engine><port>7</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE8</id> <cmfsi>1</cmfsi><engine>12</engine><port>0</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE9</id> <cmfsi>1</cmfsi><engine>12</engine><port>1</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE10</id><cmfsi>1</cmfsi><engine>12</engine><port>2</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE11</id><cmfsi>1</cmfsi><engine>12</engine><port>3</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE12</id><cmfsi>1</cmfsi><engine>12</engine><port>4</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE13</id><cmfsi>1</cmfsi><engine>12</engine><port>5</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE14</id><cmfsi>1</cmfsi><engine>12</engine><port>6</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+			<fsi-cascade-master-unit><id>FSI_CASCADE15</id><cmfsi>1</cmfsi><engine>12</engine><port>7</port><cfam-id>cfam0</cfam-id></fsi-cascade-master-unit>
+		</fsi-cascade-master-units>
+		<fsi-master-units>
+			<fsi-master-unit><id>MFSI0</id><engine>13</engine><port>0</port><cfam-id>cfam0</cfam-id></fsi-master-unit>
+			<fsi-master-unit><id>MFSI1</id><engine>13</engine><port>1</port><cfam-id>cfam0</cfam-id></fsi-master-unit>
+			<fsi-master-unit><id>MFSI2</id><engine>13</engine><port>2</port><cfam-id>cfam0</cfam-id></fsi-master-unit>
+			<fsi-master-unit><id>MFSI3</id><engine>13</engine><port>3</port><cfam-id>cfam0</cfam-id></fsi-master-unit>
+			<fsi-master-unit><id>MFSI4</id><engine>13</engine><port>4</port><cfam-id>cfam0</cfam-id></fsi-master-unit>
+			<fsi-master-unit><id>MFSI5</id><engine>13</engine><port>5</port><cfam-id>cfam0</cfam-id></fsi-master-unit>
+			<fsi-master-unit><id>MFSI6</id><engine>13</engine><port>6</port><cfam-id>cfam0</cfam-id></fsi-master-unit>
+			<fsi-master-unit><id>MFSI7</id><engine>13</engine><port>7</port><cfam-id>cfam0</cfam-id></fsi-master-unit>
+			
+		</fsi-master-units>
+		<lpc-units>
+			<lpc-unit><id>LPC</id></lpc-unit>
+		</lpc-units>
+		<powerbus-units>
+			<powerbus-unit><id>A0</id><type>A</type></powerbus-unit>
+			<powerbus-unit><id>A1</id><type>A</type></powerbus-unit>
+			<powerbus-unit><id>A2</id><type>A</type></powerbus-unit>			
+			<powerbus-unit><id>X0</id><type>X</type></powerbus-unit>
+			<powerbus-unit><id>X1</id><type>X</type></powerbus-unit>
+			<powerbus-unit><id>X2</id><type>X</type></powerbus-unit>
+			<powerbus-unit><id>X3</id><type>X</type></powerbus-unit>			
+		</powerbus-units>
+		<pcie-root-units>
+			<pcie-root-unit><id>PCIE_IOP0</id><iop>0</iop><starting-lane>0</starting-lane></pcie-root-unit>   <!-- IOP 0 is x16, or 2 x8s -->
+			<pcie-root-unit><id>PCIE_IOP0_1</id><iop>0</iop><starting-lane>8</starting-lane></pcie-root-unit> <!-- if IOP 0 is bifucated into 2 x8s, use this -->
+			<pcie-root-unit><id>PCIE_IOP1</id><iop>1</iop><starting-lane>0</starting-lane></pcie-root-unit>   <!-- IOP 1 is x8 -->
+		</pcie-root-units>			
+
+			
+		<dmi-master-units>
+			<dmi-master-unit><id>DMI_M0D</id><chiplet-id>mcs0</chiplet-id></dmi-master-unit>
+			<dmi-master-unit><id>DMI_M0C</id><chiplet-id>mcs1</chiplet-id></dmi-master-unit>
+			<dmi-master-unit><id>DMI_M0A</id><chiplet-id>mcs2</chiplet-id></dmi-master-unit>
+			<dmi-master-unit><id>DMI_M0B</id><chiplet-id>mcs3</chiplet-id></dmi-master-unit>
+			<dmi-master-unit><id>DMI_M1D</id><chiplet-id>mcs4</chiplet-id></dmi-master-unit>
+			<dmi-master-unit><id>DMI_M1C</id><chiplet-id>mcs5</chiplet-id></dmi-master-unit>
+			<dmi-master-unit><id>DMI_M1A</id><chiplet-id>mcs6</chiplet-id></dmi-master-unit>
+			<dmi-master-unit><id>DMI_M1B</id><chiplet-id>mcs7</chiplet-id></dmi-master-unit>
+		</dmi-master-units>
+		<power-units>
+			<power-unit>
+				<id>VDD0</id>
+				<pin-name>VDD0</pin-name>
+				<voltage voltage-units="Volts">1.0</voltage>
+				<current-nom current-units="Amps">180</current-nom>
+				<current-max current-units="Amps">212</current-max>
+			</power-unit>
+			<power-unit>
+				<id>VCS0</id>
+				<pin-name>VCS</pin-name>
+				<voltage voltage-units="Volts">1.05</voltage>
+				<current-nom current-units="Amps">18</current-nom>
+				<current-max current-units="Amps">21</current-max>
+			</power-unit>
+			<power-unit>
+				<id>VIO</id>
+				<pin-name>VIO</pin-name>
+				<voltage voltage-units="Volts">1.05</voltage>
+				<current-nom current-units="Amps">18</current-nom>
+				<current-max current-units="Amps">21</current-max>
+			</power-unit>
+			<power-unit>
+				<id>VPCI</id>
+				<pin-name>VPCI</pin-name>
+				<voltage voltage-units="Volts">1.2</voltage>
+				<current-nom current-units="Amps">5</current-nom>
+				<current-max current-units="Amps">3</current-max>
+			</power-unit>
+			<power-unit>
+				<id>AVDD</id>
+				<pin-name>AVDD</pin-name>
+				<voltage voltage-units="Volts">1.5</voltage>
+				<current-nom current-units="Amps">2</current-nom>
+				<current-max current-units="Amps">1</current-max>
+			</power-unit>			
+		</power-units>
+
+	</units>
+
+    <internal-units>
+
+        <!-- Units for the PHBs.  Separate from the PCIE IOP units -->
+        <pcie-phb-units>
+            <pcie-phb-unit><id>PHB0</id><phb>0</phb></pcie-phb-unit>
+            <pcie-phb-unit><id>PHB1</id><phb>1</phb></pcie-phb-unit>
+            <pcie-phb-unit><id>PHB2</id><phb>2</phb></pcie-phb-unit>
+        </pcie-phb-units>
+
+        <!-- the CFAM engines -->
+        <engine-units>
+            <engine-unit>
+                <id>shift</id>      <!-- FSI_SHIFT -->
+                <engine>3</engine>
+            </engine-unit>
+
+            <engine-unit>
+                <id>fsi2pib</id>    <!-- FSI2PIB/JTAG Emulation -->
+                <engine>4</engine>
+            </engine-unit>
+
+            <engine-unit>
+                <id>scratchpad</id> <!-- FSI_SCRATCHPAD -->
+                <engine>5</engine>
+            </engine-unit>
+
+            <engine-unit>
+                <id>i2cm</id>       <!-- FSI_I2CM -->
+                <engine>6</engine>
+            </engine-unit>
+
+            <engine-unit>
+                <id>mailbox</id>    <!-- FSI_GEMINI_MAILBOX -->
+                <engine>10</engine>
+            </engine-unit>
+
+            <engine-unit>
+                <id>cMFSI</id>      <!-- cMFSI control register space -->
+                <engine>12</engine>
+            </engine-unit>
+
+            <engine-unit>
+                <id>MFSI</id>       <!-- MFSI control register space -->
+                <engine>13</engine>
+            </engine-unit>
+
+        </engine-units>
+
+		<cfam-units>
+			<cfam-unit><id>cfam0</id></cfam-unit>
+		</cfam-units>
+
+    </internal-units>
+
+	<internal-attributes>
+	
+	    <instruction-cache-attributes>
+	        <per-cpu>yes</per-cpu>
+	        <cache-size storage-units="KByte">32</cache-size>
+	        <cache-line-size storage-units="Byte">128</cache-line-size>
+	        <cache-block-size storage-units="Byte">128</cache-block-size>
+	        <associativity>4-way</associativity>
+	    </instruction-cache-attributes>
+	
+	    <data-cache-attributes>
+	        <per-cpu>yes</per-cpu>
+	        <cache-size storage-units="KByte">64</cache-size>
+	        <cache-line-size storage-units="Byte">128</cache-line-size>
+	        <cache-block-size storage-units="Byte">128</cache-block-size>
+	        <associativity>8-way</associativity>
+	    </data-cache-attributes>
+	
+	    <l2-cache-attributes>
+	        <per-cpu>yes</per-cpu>
+	        <cache-size storage-units="KByte">512</cache-size>
+	        <cache-line-size storage-units="Byte">128</cache-line-size>
+	        <cache-block-size storage-units="Byte">128</cache-block-size>
+	        <associativity>8-way</associativity>
+	    </l2-cache-attributes>
+	
+	    <l3-cache-attributes>
+	        <per-cpu>yes</per-cpu>
+	        <cache-size storage-units="MByte">512</cache-size>
+	        <cache-line-size storage-units="Byte">128</cache-line-size>
+	        <cache-block-size storage-units="Byte">128</cache-block-size>
+	        <associativity>8-way</associativity>
+	    </l3-cache-attributes>
+	
+	    <cpu-attributes>
+			<bus-width>8</bus-width>
+	        <data-tlb-entries>512</data-tlb-entries>
+	        <data-tlb-associativity>4</data-tlb-associativity>
+	        <instruction-tlb-entries>512</instruction-tlb-entries>
+	        <instruction-tlb-associativity>4</instruction-tlb-associativity>
+	        <reservation-size storage-units="Byte">128</reservation-size>
+	        <logically-unified-L1-instruction-data-cache>no</logically-unified-L1-instruction-data-cache>
+	        <physically-unified-L1-instruction-data-cache>no</physically-unified-L1-instruction-data-cache>
+	        <split-tlb-organization>no</split-tlb-organization>
+	        <supports-instruction-tlbia>no</supports-instruction-tlbia>
+	        <supports-perf-monitor>no</supports-perf-monitor>
+	        <supports-instruction-stfiwx-fres-frsqrte-fsel>yes</supports-instruction-stfiwx-fres-frsqrte-fsel>
+	        <supports-external-control-facility>no</supports-external-control-facility>
+	        <supports-bridge-facilities>no</supports-bridge-facilities>
+			<threads-per-core>8</threads-per-core>
+	    </cpu-attributes>
+	
+	</internal-attributes>
+
+</part>
+
+</parts>
