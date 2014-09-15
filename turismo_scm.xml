@@ -1,47 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- IBM_PROLOG_BEGIN_TAG                                                   -->
-<!-- This is an automatically generated prolog.                             -->
-<!--                                                                        -->
-<!-- $Source: turismo_scm.xml $                                             -->
-<!--                                                                        -->
-<!-- OpenPOWER HostBoot Project                                             -->
-<!--                                                                        -->
-<!-- Contributors Listed Below - COPYRIGHT 2014                             -->
-<!-- [+] International Business Machines Corp.                              -->
-<!--                                                                        -->
-<!--                                                                        -->
-<!-- Licensed under the Apache License, Version 2.0 (the "License");        -->
-<!-- you may not use this file except in compliance with the License.       -->
-<!-- You may obtain a copy of the License at                                -->
-<!--                                                                        -->
-<!--     http://www.apache.org/licenses/LICENSE-2.0                         -->
-<!--                                                                        -->
-<!-- Unless required by applicable law or agreed to in writing, software    -->
-<!-- distributed under the License is distributed on an "AS IS" BASIS,      -->
-<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or        -->
-<!-- implied. See the License for the specific language governing           -->
-<!-- permissions and limitations under the License.                         -->
-<!--                                                                        -->
-<!-- IBM_PROLOG_END_TAG                                                     -->
-<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/mrwb/serverwiz/com.ibm.njames.serverwiz/src/com/ibm/njames/serverwiz/designer/model/LogicDiagram.java,v 1.54 2013/06/06 10:00:03 kpachar Exp $ --><card xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw" xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw">
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/working/common/turismo_scm.xml,v 1.6 2014/08/20 01:22:10 mashak Exp $ --><card xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw" xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw">
 
 <id>turismo_scm</id>
 <card-type>scm-module</card-type>
 <description></description>
 
 <parts-used>
-	<part-used><part-id>VENICE</part-id><ec-level>DD1</ec-level></part-used>
 	<part-used><part-id>MOD_SEEPROM_512</part-id></part-used>
+	<part-used><part-id>OPNPWR_VENICE</part-id><ec-level>DD1</ec-level></part-used>
 </parts-used>
 <connectors-used>
 	<connector><part-id>TURISMO_SOCKET</part-id></connector>
 </connectors-used>
 <part-instances>
-	<part-instance><id>U0</id><part-id>VENICE</part-id><position>0</position><ecmd>yes</ecmd><processor-family>IBM Power8</processor-family><ec-level>DD1</ec-level></part-instance>
-	<part-instance><id>U2</id><part-id>MOD_SEEPROM_512</part-id><position>0</position><content-type>PRIMARY_SBE_VPD</content-type><seeprom-byte-address-offset>2</seeprom-byte-address-offset><seeprom-write-page-boundary>256</seeprom-write-page-boundary><vpd-size>24c512</vpd-size><seeprom-memory-size>512</seeprom-memory-size></part-instance>
-	<part-instance><id>U1</id><part-id>MOD_SEEPROM_512</part-id><position>1</position><content-type>PRIMARY_FRU_AND_MODULE_VPD</content-type><seeprom-byte-address-offset>2</seeprom-byte-address-offset><seeprom-write-page-boundary>256</seeprom-write-page-boundary><vpd-size>24c512</vpd-size><seeprom-memory-size>512</seeprom-memory-size></part-instance>
-	<part-instance><id>U3</id><part-id>MOD_SEEPROM_512</part-id><position>2</position><content-type>REDUNDANT_FRU_AND_MODULE_VPD</content-type><seeprom-byte-address-offset>2</seeprom-byte-address-offset><seeprom-write-page-boundary>256</seeprom-write-page-boundary><vpd-size>24c512</vpd-size><seeprom-memory-size>512</seeprom-memory-size></part-instance>
-	<part-instance><id>U4</id><part-id>MOD_SEEPROM_512</part-id><position>3</position><content-type>REDUNDANT_SBE_VPD</content-type><seeprom-byte-address-offset>2</seeprom-byte-address-offset><seeprom-write-page-boundary>256</seeprom-write-page-boundary><vpd-size>24c512</vpd-size><seeprom-memory-size>512</seeprom-memory-size></part-instance>
+	<part-instance><id>U0</id><part-id>OPNPWR_VENICE</part-id><position>0</position><ecmd>yes</ecmd><ec-level>DD1</ec-level><processor-family>IBM Power8</processor-family></part-instance>
+	<part-instance><id>U2</id><part-id>MOD_SEEPROM_512</part-id><position>0</position><content-type>PRIMARY_SBE_VPD</content-type><seeprom-byte-address-offset>2</seeprom-byte-address-offset><seeprom-write-page-boundary>256</seeprom-write-page-boundary><seeprom-memory-size>512</seeprom-memory-size><vpd-size>24c512</vpd-size></part-instance>
+	<part-instance><id>U1</id><part-id>MOD_SEEPROM_512</part-id><position>1</position><content-type>PRIMARY_FRU_AND_MODULE_VPD</content-type><seeprom-byte-address-offset>2</seeprom-byte-address-offset><seeprom-write-page-boundary>256</seeprom-write-page-boundary><seeprom-memory-size>512</seeprom-memory-size><vpd-size>24c512</vpd-size></part-instance>
+	<part-instance><id>U3</id><part-id>MOD_SEEPROM_512</part-id><position>2</position><content-type>REDUNDANT_FRU_AND_MODULE_VPD</content-type><seeprom-byte-address-offset>2</seeprom-byte-address-offset><seeprom-write-page-boundary>256</seeprom-write-page-boundary><seeprom-memory-size>512</seeprom-memory-size><vpd-size>24c512</vpd-size></part-instance>
+	<part-instance><id>U4</id><part-id>MOD_SEEPROM_512</part-id><position>3</position><content-type>REDUNDANT_SBE_VPD</content-type><seeprom-byte-address-offset>2</seeprom-byte-address-offset><seeprom-write-page-boundary>256</seeprom-write-page-boundary><seeprom-memory-size>512</seeprom-memory-size><vpd-size>24c512</vpd-size></part-instance>
 </part-instances>
 <connector-instances>
 	<connector-instance><id>JBSM</id><connector-id>TURISMO_SOCKET</connector-id><position>0</position></connector-instance>
@@ -49,31 +25,31 @@
 <busses>
 <dmis>
 	<dmi>
-		<id>dmi11</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>DMI7</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>DMI3</pin-name></endpoint>
-	</dmi>
-	<dmi>
-		<id>dmi5</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>DMI2</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>DMI0</pin-name></endpoint>
-	</dmi>
-	<dmi>
-		<id>dmi2</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>DMI0</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>DMI1</pin-name></endpoint>
+		<id>dmi14</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>DMI_M1D</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>DMI_M1D</pin-name></endpoint>
 	</dmi>
 	<dmi>
 		<id>dmi8</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>DMI1</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>DMI2</pin-name></endpoint>
+		<source><part-instance-id>U0</part-instance-id><unit-name>DMI_M0C</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>DMI_M0C</pin-name></endpoint>
+	</dmi>
+	<dmi>
+		<id>dmi11</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>DMI_M0D</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>DMI_M0D</pin-name></endpoint>
+	</dmi>
+	<dmi>
+		<id>dmi17</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>DMI_M1C</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>DMI_M1C</pin-name></endpoint>
 	</dmi>
 </dmis>
 <clocks>
 	<clock>
-		<id>clock20</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>OSC0_TOD_REFCLK</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>OSC0_TOD_REFCLK</pin-name></endpoint>
+		<id>clock2</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>OSC0_CHIP_REFCLK</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>LPC_CLK</pin-name></endpoint>
 	</clock>
 	<clock>
 		<id>clock17</id>
@@ -81,9 +57,9 @@
 		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>OSC0_PCIE_REFCLK</pin-name></endpoint>
 	</clock>
 	<clock>
-		<id>clock2</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>OSC0_CHIP_REFCLK</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>LPC_CLK</pin-name></endpoint>
+		<id>clock20</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>OSC0_TOD_REFCLK</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>OSC0_TOD_REFCLK</pin-name></endpoint>
 	</clock>
 </clocks>
 <psis>
@@ -109,21 +85,21 @@
 </lpcs>
 <pcies>
 	<pcie>
-		<id>pcie5</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>PCIE_IOP1</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>PCIE1</pin-name></endpoint>
-	</pcie>
-	<pcie>
 		<id>pcie2</id>
 		<source><part-instance-id>U0</part-instance-id><unit-name>PCIE_IOP0</unit-name></source>
 		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>PCIE0</pin-name></endpoint>
 	</pcie>
+	<pcie>
+		<id>pcie5</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>PCIE_IOP1</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>PCIE1</pin-name></endpoint>
+	</pcie>
 </pcies>
 <powers>
 	<power>
-		<id>power155</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>VDD0</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>VDD</pin-name></endpoint>
+		<id>power152</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>VCS0</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>VCS</pin-name></endpoint>
 	</power>
 	<power>
 		<id>power149</id>
@@ -131,9 +107,9 @@
 		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>VIO</pin-name></endpoint>
 	</power>
 	<power>
-		<id>power152</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>VCS0</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>VCS</pin-name></endpoint>
+		<id>power155</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>VDD0</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>VDD</pin-name></endpoint>
 	</power>
 	<power>
 		<id>power146</id>
@@ -150,8 +126,8 @@
 	<i2c>
 		<id>i2c11</id>
 		<use-for-presence-detect>No</use-for-presence-detect>
-		<address>A0</address>
 		<speed>400</speed>
+		<address>A0</address>
 		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROM1</unit-name></source>
 		<endpoint><part-instance-id>U3</part-instance-id><unit-name>I2C</unit-name></endpoint>
 	</i2c>
@@ -163,43 +139,38 @@
 	<i2c>
 		<id>i2c2</id>
 		<use-for-presence-detect>No</use-for-presence-detect>
-		<address>0xA0</address>
 		<speed>400</speed>
+		<address>0xA0</address>
 		<source><part-instance-id>U1</part-instance-id><unit-name>I2C</unit-name></source>
 		<endpoint><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROM</unit-name></endpoint>
-	</i2c>
-	<i2c>
-		<id>i2c8</id>
-		<use-for-presence-detect>No</use-for-presence-detect>
-		<address>A2</address>
-		<speed>400</speed>
-		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROM1</unit-name></source>
-		<endpoint><part-instance-id>U4</part-instance-id><unit-name>I2C</unit-name></endpoint>
-	</i2c>
-	<i2c>
-		<id>i2c5</id>
-		<use-for-presence-detect>No</use-for-presence-detect>
-		<address>A2</address>
-		<speed>400</speed>
-		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROM</unit-name></source>
-		<endpoint><part-instance-id>U2</part-instance-id><unit-name>I2C</unit-name></endpoint>
 	</i2c>
 	<i2c>
 		<id>i2c128</id>
 		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_HOTPLUG</unit-name></source>
 		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>I2C_HOTPLUG</pin-name></endpoint>
 	</i2c>
+	<i2c>
+		<id>i2c8</id>
+		<use-for-presence-detect>No</use-for-presence-detect>
+		<speed>400</speed>
+		<address>A2</address>
+		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROM1</unit-name></source>
+		<endpoint><part-instance-id>U4</part-instance-id><unit-name>I2C</unit-name></endpoint>
+	</i2c>
+	<i2c>
+		<id>i2c5</id>
+		<use-for-presence-detect>No</use-for-presence-detect>
+		<speed>400</speed>
+		<address>A2</address>
+		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROM</unit-name></source>
+		<endpoint><part-instance-id>U2</part-instance-id><unit-name>I2C</unit-name></endpoint>
+	</i2c>
 </i2cs>
 <fsis>
 	<fsi>
-		<id>fsi65</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>FSI_CASCADE3</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>FSI0_CENT3</pin-name></endpoint>
-	</fsi>
-	<fsi>
-		<id>fsi74</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>FSI_CASCADE6</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>FSI0_CENT6</pin-name></endpoint>
+		<id>fsi62</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>FSI_CASCADE2</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>FSI0_CENT2</pin-name></endpoint>
 	</fsi>
 	<fsi>
 		<id>fsi2</id>
@@ -207,9 +178,24 @@
 		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>MFSI3</pin-name></endpoint>
 	</fsi>
 	<fsi>
-		<id>fsi62</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>FSI_CASCADE2</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>FSI0_CENT2</pin-name></endpoint>
+		<id>fsi65</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>FSI_CASCADE3</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>FSI0_CENT3</pin-name></endpoint>
+	</fsi>
+	<fsi>
+		<id>fsi77</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>FSI_CASCADE7</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>FSI0_CENT7</pin-name></endpoint>
+	</fsi>
+	<fsi>
+		<id>fsi74</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>FSI_CASCADE6</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>FSI0_CENT6</pin-name></endpoint>
+	</fsi>
+	<fsi>
+		<id>fsi59</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>FSI_CASCADE1</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>FSI0_CENT1</pin-name></endpoint>
 	</fsi>
 	<fsi>
 		<id>fsi113</id>
@@ -222,37 +208,17 @@
 		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>FSI0_CENT0</pin-name></endpoint>
 	</fsi>
 	<fsi>
-		<id>fsi110</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>MFSI1</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>MFSI1</pin-name></endpoint>
-	</fsi>
-	<fsi>
-		<id>fsi77</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>FSI_CASCADE7</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>FSI0_CENT7</pin-name></endpoint>
-	</fsi>
-	<fsi>
 		<id>fsi116</id>
 		<source><part-instance-id>U0</part-instance-id><unit-name>FSI_SLAVE0</unit-name></source>
 		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>FSI_A</pin-name></endpoint>
 	</fsi>
 	<fsi>
-		<id>fsi59</id>
-		<source><part-instance-id>U0</part-instance-id><unit-name>FSI_CASCADE1</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>FSI0_CENT1</pin-name></endpoint>
+		<id>fsi110</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>MFSI1</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>MFSI1</pin-name></endpoint>
 	</fsi>
 </fsis>
 <powerbusses>
-	<powerbus>
-		<id>powerbus53</id>
-		<rx-msb-lsb-swap>No</rx-msb-lsb-swap>
-		<downstream_n_p_lane_swap_mask>0x00000000</downstream_n_p_lane_swap_mask>
-		<tx-msb-lsb-swap>No</tx-msb-lsb-swap>
-		<bus-width>2</bus-width>
-		<upstream_n_p_lane_swap_mask>0x00000000</upstream_n_p_lane_swap_mask>
-		<source><part-instance-id>U0</part-instance-id><unit-name>A0</unit-name></source>
-		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>A0</pin-name></endpoint>
-	</powerbus>
 	<powerbus>
 		<id>powerbus47</id>
 		<rx-msb-lsb-swap>No</rx-msb-lsb-swap>
@@ -272,6 +238,16 @@
 		<upstream_n_p_lane_swap_mask>0x00000000</upstream_n_p_lane_swap_mask>
 		<source><part-instance-id>U0</part-instance-id><unit-name>A1</unit-name></source>
 		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>A1</pin-name></endpoint>
+	</powerbus>
+	<powerbus>
+		<id>powerbus53</id>
+		<rx-msb-lsb-swap>No</rx-msb-lsb-swap>
+		<downstream_n_p_lane_swap_mask>0x00000000</downstream_n_p_lane_swap_mask>
+		<tx-msb-lsb-swap>No</tx-msb-lsb-swap>
+		<bus-width>2</bus-width>
+		<upstream_n_p_lane_swap_mask>0x00000000</upstream_n_p_lane_swap_mask>
+		<source><part-instance-id>U0</part-instance-id><unit-name>A0</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>A0</pin-name></endpoint>
 	</powerbus>
 </powerbusses>
 </busses>
