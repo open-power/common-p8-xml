@@ -3537,6 +3537,7 @@
             <xs:restriction base="xs:string">
                 <xs:enumeration value="24c1024" />
                 <xs:enumeration value="24c512" />
+                <xs:enumeration value="24c256" />
                 <xs:enumeration value="24c128" />
                 <xs:enumeration value="24c64" />
                 <xs:enumeration value="24c32" />
