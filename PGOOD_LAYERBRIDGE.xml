@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IBM_PROLOG_BEGIN_TAG                                                   -->
+<!-- This is an automatically generated prolog.                             -->
+<!--                                                                        -->
+<!-- $Source: PGOOD_LAYERBRIDGE.xml $                                       -->
+<!--                                                                        -->
+<!-- OpenPOWER HostBoot Project                                             -->
+<!--                                                                        -->
+<!-- Contributors Listed Below - COPYRIGHT 2014                             -->
+<!-- [+] International Business Machines Corp.                              -->
+<!--                                                                        -->
+<!--                                                                        -->
+<!-- Licensed under the Apache License, Version 2.0 (the "License");        -->
+<!-- you may not use this file except in compliance with the License.       -->
+<!-- You may obtain a copy of the License at                                -->
+<!--                                                                        -->
+<!--     http://www.apache.org/licenses/LICENSE-2.0                         -->
+<!--                                                                        -->
+<!-- Unless required by applicable law or agreed to in writing, software    -->
+<!-- distributed under the License is distributed on an "AS IS" BASIS,      -->
+<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or        -->
+<!-- implied. See the License for the specific language governing           -->
+<!-- permissions and limitations under the License.                         -->
+<!--                                                                        -->
+<!-- IBM_PROLOG_END_TAG                                                     -->
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/parts/PGOOD_LAYERBRIDGE.xml,v 1.2 2012-08-01 20:01:40 drcampbe Exp $ -->
+<parts xmlns:xi="http://www.w3.org/2001/XInclude"
+		xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+		xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw">
+   	<part>
+   		<!-- This part is used purely in ServerWiz to connect GPIO pins in the GPIO layer to the PGOOD pins in the Power layer -->
+		<id>PGOOD_LAYERBRIDGE</id>
+		<part-class>layer-bridge</part-class>
+		<units>
+			<gpio-slave-units>
+				<gpio-slave-unit><id>GPIO</id></gpio-slave-unit>
+			</gpio-slave-units>
+			<pgood-master-units>
+				<pgood-master-unit><id>PGOOD</id></pgood-master-unit>
+			</pgood-master-units>
+		</units>
+	</part>
+</parts>

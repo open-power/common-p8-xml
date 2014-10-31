@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IBM_PROLOG_BEGIN_TAG                                                   -->
+<!-- This is an automatically generated prolog.                             -->
+<!--                                                                        -->
+<!-- $Source: mru-type-mapping.xml $                                        -->
+<!--                                                                        -->
+<!-- OpenPOWER HostBoot Project                                             -->
+<!--                                                                        -->
+<!-- Contributors Listed Below - COPYRIGHT 2014                             -->
+<!-- [+] International Business Machines Corp.                              -->
+<!--                                                                        -->
+<!--                                                                        -->
+<!-- Licensed under the Apache License, Version 2.0 (the "License");        -->
+<!-- you may not use this file except in compliance with the License.       -->
+<!-- You may obtain a copy of the License at                                -->
+<!--                                                                        -->
+<!--     http://www.apache.org/licenses/LICENSE-2.0                         -->
+<!--                                                                        -->
+<!-- Unless required by applicable law or agreed to in writing, software    -->
+<!-- distributed under the License is distributed on an "AS IS" BASIS,      -->
+<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or        -->
+<!-- implied. See the License for the specific language governing           -->
+<!-- permissions and limitations under the License.                         -->
+<!--                                                                        -->
+<!-- IBM_PROLOG_END_TAG                                                     -->
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/common/mru-type-mapping.xml,v 1.1 2013/02/26 14:02:19 hlava Exp $ -->
+<mru-type-mapping xmlns:xi="http://www.w3.org/2001/XInclude"
+  	xmlns:mrwsyspol="http://w3.ibm.com/stg/power-firmware/schema/mrwmrutm"
+    xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrwmrutm"
+    >
+
+<mru-type-map>
+	<mru-type-name>unknown</mru-type-name>
+	<mru-type-value>0xFFFF</mru-type-value>
+</mru-type-map>
+
+<!-- **********************************************************************
+           part-type mappings
+     ********************************************************************** -->
+<mru-type-map>
+	<from-part-types>
+		<part-type>cpu</part-type>
+	</from-part-types>
+	<mru-type-name>proc-chip</mru-type-name>
+	<mru-type-value>0x0001</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-part-types>
+		<part-type>membuf</part-type>
+	</from-part-types>
+	<mru-type-name>membuf-chip</mru-type-name>
+	<mru-type-value>0x0006</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-part-types>
+		<part-type>fsp</part-type>
+	</from-part-types>
+	<mru-type-name>sp-chip</mru-type-name>
+	<mru-type-value>0x0009</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-part-types>
+		<part-type>cfam-s</part-type>
+	</from-part-types>
+	<mru-type-name>sp-iou-chip</mru-type-name>
+	<mru-type-value>0x000A</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-part-types>
+		<part-type>pcie-switch</part-type>
+		<part-type>usb</part-type>
+	</from-part-types>
+	<mru-type-name>builtin-io</mru-type-name>
+	<mru-type-value>0x000B</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-part-types>
+		<part-type>flash</part-type>
+	</from-part-types>
+	<mru-type-name>flash-chip</mru-type-name>
+	<mru-type-value>0x000D</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-part-types>
+		<part-type>apss</part-type>
+	</from-part-types>
+	<mru-type-name>apss</mru-type-name>
+	<mru-type-value>0x000E</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-part-types>
+		<part-type>dpss</part-type>
+	</from-part-types>
+	<mru-type-name>dpss</mru-type-name>
+	<mru-type-value>0x000F</mru-type-value>
+</mru-type-map>
+
+<!-- **********************************************************************
+           card-type mappings
+     ********************************************************************** -->
+<mru-type-map>
+	<from-card-types>
+		<card-type>dcm-module</card-type>
+	</from-card-types>
+	<mru-type-name>proc-module</mru-type-name>
+	<mru-type-value>0x0100</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-card-types>
+		<card-type>pcie-riser</card-type>
+	</from-card-types>
+	<mru-type-name>riser-card</mru-type-name>
+	<mru-type-value>0x0101</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-card-types>
+		<card-type>dimm</card-type>
+	</from-card-types>
+	<mru-type-name>dimm</mru-type-name>
+	<mru-type-value>0x0102</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-card-types>
+		<card-type>vrm</card-type>
+	</from-card-types>
+	<mru-type-name>vrm-card</mru-type-name>
+	<mru-type-value>0x0104</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-card-types>
+		<card-type>*</card-type>
+	</from-card-types>
+	<mru-type-name>card-asm</mru-type-name>
+	<mru-type-value>0x0103</mru-type-value>
+</mru-type-map>
+
+<!-- **********************************************************************
+           chiplet-type mappings
+     ********************************************************************** -->
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>occ</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>occ</mru-type-name>
+	<mru-type-value>0x0201</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>ex</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>ex</mru-type-name>
+	<mru-type-value>0x0202</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>core</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>core</mru-type-name>
+	<mru-type-value>0x0203</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>L2</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>L2</mru-type-name>
+	<mru-type-value>0x0204</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>L3</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>L3</mru-type-name>
+	<mru-type-value>0x0205</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>ncu</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>ncu</mru-type-name>
+	<mru-type-value>0x0206</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>mcs</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>mcs</mru-type-name>
+	<mru-type-value>0x0207</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>nx</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>nx</mru-type-name>
+	<mru-type-value>0x0208</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>capp</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>capp</mru-type-name>
+	<mru-type-value>0x0209</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>slw</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>slw</mru-type-name>
+	<mru-type-value>0x020A</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>as</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>as</mru-type-name>
+	<mru-type-value>0x020B</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>sbe</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>sbe</mru-type-name>
+	<mru-type-value>0x020C</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>L4</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>L4</mru-type-name>
+	<mru-type-value>0x020D</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-chiplet-target-names>
+		<chiplet-target-name>mba</chiplet-target-name>
+	</from-chiplet-target-names>
+	<mru-type-name>mba</mru-type-name>
+	<mru-type-value>0x020E</mru-type-value>
+</mru-type-map>
+
+<!-- **********************************************************************
+           unit-type mappings
+     ********************************************************************** -->
+<mru-type-map>
+	<from-unit-types>
+		<unit-type>powerbus-unit,A</unit-type>
+	</from-unit-types>
+	<mru-type-name>abus</mru-type-name>
+	<mru-type-value>0x0301</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-unit-types>
+		<unit-type>powerbus-unit,X</unit-type>
+	</from-unit-types>
+	<mru-type-name>xbus</mru-type-name>
+	<mru-type-value>0x0302</mru-type-value>
+</mru-type-map>
+
+<mru-type-map>
+	<from-unit-types>
+		<unit-type>pcie-root-unit,*</unit-type>
+	</from-unit-types>
+	<mru-type-name>pcie</mru-type-name>
+	<mru-type-value>0x0303</mru-type-value>
+</mru-type-map>
+
+</mru-type-mapping>
