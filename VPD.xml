@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /afs/awd.austin.ibm.com/proj/p9/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/working/parts/VPD.xml,v 1.2 2013/09/18 13:15:30 hlava Exp $ -->
+<parts xmlns:xi="http://www.w3.org/2001/XInclude"
+  	xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    >
+
+<part>
+	<id>VPD</id>
+	<part-class>chip</part-class>
+	<part-type>seeprom</part-type>
+	<part-num>x0pxxxx</part-num>
+	<description>VPD</description>
+	<content-type>PLANAR_VPD</content-type>
+	<vpd-size>24c64</vpd-size>
+	<units>
+		<i2c-slave-units>
+			<i2c-slave-unit>
+				<id>I2C</id>
+				<pin-name>SDA</pin-name>
+				<fixed-address></fixed-address>
+			</i2c-slave-unit>
+		</i2c-slave-units>
+		<power-input-units>
+			<power-input-unit>
+				<id>3.3V</id>
+				<pin-name>3.3V</pin-name>
+				<voltage voltage-units="Volts">3.3</voltage>
+				<current-nom current-units="Amps">0.01</current-nom>
+				<current-max current-units="Amps">0.02</current-max>
+			</power-input-unit>
+		</power-input-units>
+	</units>
+	<seeprom-byte-address-offset></seeprom-byte-address-offset>
+	<seeprom-memory-size></seeprom-memory-size>
+	<seeprom-write-page-boundary></seeprom-write-page-boundary>
+</part>
+
+</parts>

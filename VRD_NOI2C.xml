@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IBM_PROLOG_BEGIN_TAG                                                   -->
+<!-- This is an automatically generated prolog.                             -->
+<!--                                                                        -->
+<!-- $Source: VRD_NOI2C.xml $                                               -->
+<!--                                                                        -->
+<!-- OpenPOWER HostBoot Project                                             -->
+<!--                                                                        -->
+<!-- Contributors Listed Below - COPYRIGHT 2014                             -->
+<!-- [+] International Business Machines Corp.                              -->
+<!--                                                                        -->
+<!--                                                                        -->
+<!-- Licensed under the Apache License, Version 2.0 (the "License");        -->
+<!-- you may not use this file except in compliance with the License.       -->
+<!-- You may obtain a copy of the License at                                -->
+<!--                                                                        -->
+<!--     http://www.apache.org/licenses/LICENSE-2.0                         -->
+<!--                                                                        -->
+<!-- Unless required by applicable law or agreed to in writing, software    -->
+<!-- distributed under the License is distributed on an "AS IS" BASIS,      -->
+<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or        -->
+<!-- implied. See the License for the specific language governing           -->
+<!-- permissions and limitations under the License.                         -->
+<!--                                                                        -->
+<!-- IBM_PROLOG_END_TAG                                                     -->
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/parts/VRD_NOI2C.xml,v 1.1 2012-02-07 20:15:27 njames Exp $ -->
+<parts xmlns:xi="http://www.w3.org/2001/XInclude"
+  	xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    >
+
+<part>
+	<id>VRD_NOI2C</id>
+	<part-class>vrd</part-class>
+	<part-type>vrd</part-type>
+	<description>VRD w/no I2C</description>
+	<number-of-phases>1</number-of-phases>
+	<power-efficiency>90</power-efficiency>
+	<voltage-out voltage-units="Volts">3.3</voltage-out>
+	<units>
+		<pgood-units><pgood-unit><id>PGOOD</id><pin-name>PGOOD</pin-name></pgood-unit></pgood-units>
+		<enable-units><enable-unit><id>ENABLE</id><pin-name>ENABLE</pin-name></enable-unit></enable-units>
+		<power-input-units>
+			<power-input-unit><id>12V_IN</id><pin-name>12V_IN</pin-name>
+			<voltage voltage-units="Volts">12</voltage>
+			</power-input-unit>
+		</power-input-units>
+		<power-output-units>
+			<power-output-unit><id>VOUT</id><pin-name>VOUT</pin-name></power-output-unit>
+		</power-output-units>
+	</units>
+</part>
+
+</parts>

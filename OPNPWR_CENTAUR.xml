@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /afs/awd/projects/eclipz/KnowledgeBase/.cvsroot/eclipz/systems/pegasus/xml/working/parts/OPNPWR_CENTAUR.xml,v 1.1 2014/08/08 17:55:39 mashak Exp $ -->
+<parts xmlns:xi="http://www.w3.org/2001/XInclude"
+  	xmlns:mrw="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    xmlns="http://w3.ibm.com/stg/power-firmware/schema/mrw"
+    >
+
+<part>
+	<id>OPNPWR_CENTAUR</id>
+	<part-class>chip</part-class>
+	<ec-level>DD1</ec-level>
+	<part-type>membuf</part-type>
+	<ecmd>yes</ecmd>
+	<chiplets>
+		<chiplet><id>mba01</id><target-name>mba</target-name><position>0</position>
+			<chiplet><id>port0</id></chiplet>
+			<chiplet><id>port1</id></chiplet>
+			<chiplet><id>port2</id></chiplet>
+			<chiplet><id>port3</id></chiplet>
+		</chiplet>		
+		<chiplet><id>mba23</id><target-name>mba</target-name><position>1</position>
+			<chiplet><id>port0</id></chiplet>
+			<chiplet><id>port1</id></chiplet>
+			<chiplet><id>port2</id></chiplet>
+			<chiplet><id>port3</id></chiplet>
+		</chiplet>
+
+        <!-- L4 cache -->
+        <chiplet><id>L4</id><target-name>L4</target-name><position>0</position></chiplet>
+	</chiplets>
+	<units>
+		<i2c-master-units>
+			<i2c-master-unit>
+				<id>I2CMASTER_DIMMS0</id>
+                <engine>6</engine>
+                <port>0</port>
+				<pin-name>SDA_M0</pin-name>
+				<description>I2C Master for DIMMs</description>
+			</i2c-master-unit>
+			<i2c-master-unit>
+				<id>I2CSPR_DIMMS0</id>
+                <engine>6</engine>
+                <port>1</port>
+				<pin-name>SDA_M0</pin-name>
+				<description>I2C SPR for DIMMs</description>
+			</i2c-master-unit>
+		</i2c-master-units>
+		<fsi-slave-units>
+			<fsi-slave-unit><id>FSI_SLAVE0</id><port>0</port></fsi-slave-unit>
+			<fsi-slave-unit><id>FSI_SLAVE1</id><port>1</port></fsi-slave-unit>
+		</fsi-slave-units>
+		<gpio-units>
+			<gpio-unit><id>GPIO_PORT0</id><engine>7</engine><port>0</port></gpio-unit>
+		</gpio-units>
+		<ddr-master-units>
+			<ddr-master-unit><id>DDR3_PORTA_SLOT0</id><port>0</port><slot>0</slot><chiplet-id>mba01</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTA_SLOT1</id><port>0</port><slot>1</slot><chiplet-id>mba01</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTC_SLOT0</id><port>0</port><slot>0</slot><chiplet-id>mba23</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTC_SLOT1</id><port>0</port><slot>1</slot><chiplet-id>mba23</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTB_SLOT0</id><port>1</port><slot>0</slot><chiplet-id>mba01</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTB_SLOT1</id><port>1</port><slot>1</slot><chiplet-id>mba01</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTD_SLOT0</id><port>1</port><slot>0</slot><chiplet-id>mba23</chiplet-id></ddr-master-unit>
+			<ddr-master-unit><id>DDR3_PORTD_SLOT1</id><port>1</port><slot>1</slot><chiplet-id>mba23</chiplet-id></ddr-master-unit>
+		</ddr-master-units>
+		<dmi-slave-units>
+			<dmi-slave-unit><id>DMI</id></dmi-slave-unit>
+		</dmi-slave-units>
+		<power-input-units>
+			<power-input-unit>
+				<id>VMEM</id>
+				<pin-name>VMEM</pin-name>
+				<voltage voltage-units="Volts">1.35</voltage>
+				<current-nom current-units="Amps">10</current-nom>
+				<current-max current-units="Amps">12</current-max>
+			</power-input-unit>
+			<power-input-unit>
+				<id>VPP</id>
+				<pin-name>VPP</pin-name>
+				<voltage voltage-units="Volts">2.5</voltage>
+				<current-nom current-units="Amps">3</current-nom>
+				<current-max current-units="Amps">4</current-max>
+			</power-input-unit>
+			<power-input-unit>
+				<id>VCACHE</id>
+				<pin-name>VCACHE</pin-name>
+				<voltage voltage-units="Volts">1.035</voltage>
+				<current-nom current-units="Amps">18</current-nom>
+				<current-max current-units="Amps">21</current-max>
+			</power-input-unit>
+			<power-input-unit>
+				<id>VCORE</id>
+				<pin-name>VCORE</pin-name>
+				<voltage voltage-units="Volts">0.9</voltage>
+				<current-nom current-units="Amps">18</current-nom>
+				<current-max current-units="Amps">21</current-max>
+			</power-input-unit>
+			<power-input-unit>
+				<id>AVDD</id>
+				<pin-name>AVDD</pin-name>
+				<voltage voltage-units="Volts">0.9</voltage>
+				<current-nom current-units="Amps">18</current-nom>
+				<current-max current-units="Amps">21</current-max>
+			</power-input-unit>
+		</power-input-units>
+	</units>
+
+    <internal-units>
+
+        <!-- the CFAM Engines -->
+        <engine-units>
+            <engine-unit>
+                <id>shift</id>      <!-- fsi_shift -->
+                <engine>3</engine>
+            </engine-unit>
+            <engine-unit>
+                <id>fsi2pib</id>    <!-- fsi2pib -->
+                <engine>4</engine>
+            </engine-unit>
+            <engine-unit>
+                <id>scratchpad</id> <!-- scratchpad -->
+                <engine>5</engine>
+            </engine-unit>
+            <engine-unit>
+                <id>i2cm</id>      <!-- fsi_i2cm (1 port) -->
+                <engine>6</engine>
+            </engine-unit>
+            <engine-unit>
+                <id>gpio</id>      <!-- GPIO(0:1) -->
+                <engine>7</engine>
+            </engine-unit>
+            <engine-unit>
+                <id>fsi2pib2</id>  <!-- fsi2pib2 (w/o GP regs) -->
+                <engine>8</engine>
+            </engine-unit>
+        </engine-units>
+
+    </internal-units>
+</part>
+
+</parts>
