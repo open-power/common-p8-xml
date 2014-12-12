@@ -129,19 +129,24 @@
 		<speed>400</speed>
 		<address>0xA0</address>
 		<source><part-instance-id>U1</part-instance-id><unit-name>I2C</unit-name></source>
-		<endpoint><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROM</unit-name></endpoint>
+		<endpoint><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROC_PROM</unit-name></endpoint>
 	</i2c>
 	<i2c>
 		<id>i2c128</id>
 		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_HOTPLUG</unit-name></source>
 		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>I2C_HOTPLUG</pin-name></endpoint>
 	</i2c>
+   	<i2c>
+		<id>i2c129</id>
+		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_VPD</unit-name></source>
+		<endpoint><connector-instance-id>JBSM</connector-instance-id><pin-name>I2C_VPD</pin-name></endpoint>
+	</i2c>
 	<i2c>
 		<id>i2c11</id>
 		<use-for-presence-detect>No</use-for-presence-detect>
 		<speed>400</speed>
 		<address>A0</address>
-		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROM1</unit-name></source>
+		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROC_PROM1</unit-name></source>
 		<endpoint><part-instance-id>U3</part-instance-id><unit-name>I2C</unit-name></endpoint>
 	</i2c>
 	<i2c>
@@ -149,7 +154,7 @@
 		<use-for-presence-detect>No</use-for-presence-detect>
 		<speed>400</speed>
 		<address>A2</address>
-		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROM1</unit-name></source>
+		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROC_PROM1</unit-name></source>
 		<endpoint><part-instance-id>U4</part-instance-id><unit-name>I2C</unit-name></endpoint>
 	</i2c>
 	<i2c>
@@ -157,7 +162,7 @@
 		<use-for-presence-detect>No</use-for-presence-detect>
 		<speed>400</speed>
 		<address>A2</address>
-		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROM</unit-name></source>
+		<source><part-instance-id>U0</part-instance-id><unit-name>I2CM_PROC_PROM</unit-name></source>
 		<endpoint><part-instance-id>U2</part-instance-id><unit-name>I2C</unit-name></endpoint>
 	</i2c>
 	<i2c>
