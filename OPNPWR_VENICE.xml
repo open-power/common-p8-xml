@@ -157,7 +157,8 @@
 		<pcie-root-units>
 			<pcie-root-unit><id>PCIE_IOP0</id><iop>0</iop><starting-lane>0</starting-lane></pcie-root-unit>   <!-- IOP 0 is x16, or 2 x8s -->
 			<pcie-root-unit><id>PCIE_IOP0_1</id><iop>0</iop><starting-lane>8</starting-lane></pcie-root-unit> <!-- if IOP 0 is bifucated into 2 x8s, use this -->
-			<pcie-root-unit><id>PCIE_IOP1</id><iop>1</iop><starting-lane>0</starting-lane></pcie-root-unit>   <!-- IOP 1 is x8 -->
+			<pcie-root-unit><id>PCIE_IOP1</id><iop>1</iop><starting-lane>0</starting-lane></pcie-root-unit>   <!-- IOP 1 is x16, or 2 x8s -->
+			<pcie-root-unit><id>PCIE_IOP1_1</id><iop>1</iop><starting-lane>8</starting-lane></pcie-root-unit> <!-- if IOP 1 is bifucated into 2 x8s, use this -->
 		</pcie-root-units>			
 
 			
